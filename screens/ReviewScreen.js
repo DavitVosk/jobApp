@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import { Text, View, } from 'react-native';
+import { Text, View, Platform} from 'react-native';
 import { Button } from 'react-native-elements';
 
 class ReviewScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
     headerTitle: 'Review jobs',
-    headerRight: <Button
-      title = 'Settings' 
-      onPress={() => navigation.navigate('settings')}
-    />
+    headerRight: (
+      <Button
+        title='Settings'
+        onPress={() => navigation.navigate('settings')}
+        color='rgba(0,122,255,1)'
+        backgroundColor={'transparent'}
+      />
+    ),
+    headerStyle: { marginTop: Platform.OS === 'android' ? 24 : 0  }
   })
 
   render() {
