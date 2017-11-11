@@ -12,6 +12,7 @@ class Slides extends Component {
         <Button
           title='I am ready'
           onPress={this.props.onLastSliderButtonPress}
+          buttonStyle={styles.sliderButton}
         />
       )
     }
@@ -55,7 +56,12 @@ const styles = {
   },
   sliderText: {
     fontSize: 30,
-    color: 'white'
+    color: 'white',
+    textAlign: 'center'
+  },
+  sliderButton: {
+    marginTop: 30,
+    backgroundColor: '#0288D1'
   }
 };
 
