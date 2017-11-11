@@ -5,7 +5,7 @@ class WelcomeScreen extends Component {
   
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Text>WelcomeScreen</Text>
         <Text>WelcomeScreen</Text>
         <Text>WelcomeScreen</Text>

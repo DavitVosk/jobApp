@@ -15,7 +15,7 @@ class AuthScreen extends Component {
 }
 
 const styles = {
-  container: {}
+  container: { }
 };
 
 export default AuthScreen;
