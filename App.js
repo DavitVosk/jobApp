@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
 
     const MainNavigator = TabNavigator({
-      // welcome: { screen: WelcomeScreen, },
+      welcome: { screen: WelcomeScreen, },
       auth: { screen: AuthScreen },
       main: {
         screen: TabNavigator({

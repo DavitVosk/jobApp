@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
 class AuthScreen extends Component {
+
+  componentDidMount() {
+    this.props.fbLogin();
+  }
+  
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
+        <Text>Auth Screen</Text>
       </View>
     );
   }
 }
 
 const styles = {
-  container: { }
+  container: {}
 };
 
-export default AuthScreen;
+export default connect(null, actions)(AuthScreen);
