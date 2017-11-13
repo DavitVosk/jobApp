@@ -11,6 +11,7 @@ export const fbLogin = () => {
     let token = await AsyncStorage.getItem('fb_token');
     console.log('token', token);
 
+    // dispatch({ type: FACEBOOK_LOGIN_SUCCESS, payload: token });
     if (token) {
       // Dispatch an action saying that FB login is done
       dispatch({ type: FACEBOOK_LOGIN_SUCCESS, payload: token })

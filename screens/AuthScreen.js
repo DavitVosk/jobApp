@@ -9,19 +9,24 @@ class AuthScreen extends Component {
   componentDidMount() {
     this.props.fbLogin();
   }
-  
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.token) {
+      this.props.navigation.navigate('map')
+    }
+  }
 
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Text>Auth Screen</Text>
       </View>
     );
   }
 }
 
-const styles = {
-  container: {}
+const mapStateToProps = ({ auth }) => {
+  return { token: auth.token }
 };
 
-export default connect(null, actions)(AuthScreen);
+export default connect(mapStateToProps, actions)(AuthScreen);
