@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import { connect } from 'react-redux';
 
 class DeckScreen extends Component {
 
@@ -18,4 +19,8 @@ const styles = {
   container: {}
 };
 
-export default DeckScreen;
+const mapStateToProps = ({ jobs }) => {
+  return { jobs }
+};
+
+export default connect(mapStateToProps)(DeckScreen);
