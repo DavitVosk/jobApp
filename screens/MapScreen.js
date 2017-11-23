@@ -37,7 +37,6 @@ class MapScreen extends Component {
   };
 
   render() {
-    console.log('jobssss', this.props.jobs);
     if (! this.state.mapLoaded) {
       return (
         <View style={{ flex: 1, justifyContent: 'center' }}>
@@ -77,7 +76,7 @@ const styles = {
 };
 
 const mapStateToProps = ({ jobs }) => {
-  return { jobs }
+  return { jobs: jobs.results }
 };
 
 export default connect(mapStateToProps, actions)(MapScreen);
