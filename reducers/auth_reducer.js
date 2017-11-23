@@ -1,6 +1,6 @@
 import * as aT from '../actions/types';
 
-export default (state = {}, action) => {
+export default (state = { token: null }, action) => {
   switch (action.type) {
     case aT.FACEBOOK_LOGIN_SUCCESS:
       return { token: action.payload };

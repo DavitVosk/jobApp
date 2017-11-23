@@ -15,10 +15,10 @@ class App extends React.Component {
   render() {
 
     const MainNavigator = TabNavigator({
-      welcome: { screen: WelcomeScreen, },
-      auth: { screen: AuthScreen },
-      main: {
-        screen: TabNavigator({
+      // welcome: { screen: WelcomeScreen, },
+      // auth: { screen: AuthScreen },
+      // main: {
+      //   screen: TabNavigator({
           map: { screen: MapScreen },
           deck: { screen: DeckScreen },
           review: {
@@ -27,8 +27,8 @@ class App extends React.Component {
               settings: { screen: SettingsScreen },
             })
           }
-        })
-      }
+        // })
+      // }
     }, {
       navigationOptions: {
         tabBarVisible: false,
