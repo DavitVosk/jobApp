@@ -16,13 +16,14 @@ class DeckScreen extends Component {
     };
 
     return (
-      <Card title={job.jobtitle}>
+      <Card title={job.jobtitle} wrapperStyle={{ height: 500 }}>
         <View style={{ height: 300 }}>
           <MapView
             scrollEnabled={false}
             style={{ flex: 1 }}
             cacheEnabled={Platform.OS === 'android' ? true : false}
             initialRegion={initialRegion}
+            keyProp='jobkey'
           />
         </View>
         <View style={styles.detailWrapper}>
@@ -33,8 +34,7 @@ class DeckScreen extends Component {
           {job.snippet.replace(/<b>/g, '').replace(/<\/b>/g, '')}
         </Text>
       </Card>
-    )
-      ;
+    );
   };
 
   renderNoMoreCards = () => {
@@ -57,6 +57,9 @@ class DeckScreen extends Component {
 }
 
 const styles = {
+  container: {
+    marginTop: 10
+  },
   detailWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-around',
