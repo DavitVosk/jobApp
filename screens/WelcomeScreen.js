@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, } from 'react-native';
-import Slides from '../components/reusable/Slides';
+import Slides from '../components/Slides';
 import { connect } from 'react-redux';
 
 const SLIDE_DATA = [

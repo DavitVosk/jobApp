@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, Platform} from 'react-native';
+import { Text, View, Platform } from 'react-native';
 import { Button } from 'react-native-elements';
+import { connect } from 'react-redux';
 
 class ReviewScreen extends Component {
 
@@ -14,7 +15,7 @@ class ReviewScreen extends Component {
         backgroundColor={'transparent'}
       />
     ),
-    headerStyle: { marginTop: Platform.OS === 'android' ? 24 : 0  }
+    headerStyle: { marginTop: Platform.OS === 'android' ? 24 : 0 }
   })
 
   render() {
@@ -32,4 +33,8 @@ const styles = {
   container: {}
 };
 
-export default ReviewScreen;
+const mapStateToProps = ({ likedJibs }) => {
+  return { likedJibs }
+};
+
+export default connect(mapStateToProps)(ReviewScreen);
