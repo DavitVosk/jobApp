@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Text, View, Platform, ScrollView, Linking } from 'react-native';
 import { Button, Card } from 'react-native-elements';
 import { connect } from 'react-redux';
-import { MapView } from 'expo';
 
+import Map from '../components/Map';
 class ReviewScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
@@ -33,17 +33,14 @@ class ReviewScreen extends Component {
       return (
         <Card key={jobkey} wrapperStyle={{ height: 200 }}>
           <View style={{ flex: 1 }}>
-            <MapView
-              scrollEnabled={false}
-              style={{ flex: 1 }}
-              cacheEnabled={Platform.OS === 'android' ? true : false}
-              initialRegion={initialRegion}
-            />
+            <Map initialRegion={initialRegion} />
           </View>
+
           <View style={styles.detailWrapper}>
             <Text style={styles.italics}>{company}</Text>
             <Text style={styles.italics}>{formattedRelativeTime}</Text>
           </View>
+
           <Button
             title={'Apply Now'}
             backgroundColor='#009688'

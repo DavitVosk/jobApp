@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Text, View, Platform } from 'react-native';
 import { connect } from 'react-redux';
-import { MapView, } from 'expo';
 import { Card, Button } from 'react-native-elements';
 
 import Swipe from '../components/Swipe';
+import Map from '../components/Map';
 import * as actions from '../actions';
 
 class DeckScreen extends Component {
@@ -19,17 +19,14 @@ class DeckScreen extends Component {
     return (
       <Card title={job.jobtitle} wrapperStyle={{ height: 500 }}>
         <View style={{ height: 300 }}>
-          <MapView
-            scrollEnabled={false}
-            style={{ flex: 1 }}
-            cacheEnabled={Platform.OS === 'android' ? true : false}
-            initialRegion={initialRegion}
-          />
+          <Map initialRegion={initialRegion} />
         </View>
+
         <View style={styles.detailWrapper}>
           <Text>{job.company}</Text>
           <Text>{job.formattedRelativeTime}</Text>
         </View>
+
         <Text>
           {job.snippet.replace(/<b>/g, '').replace(/<\/b>/g, '')}
         </Text>

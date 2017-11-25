@@ -52,6 +52,7 @@ class MapScreen extends Component {
           region={this.state.region}
           onRegionChangeComplete={this.onRegionChangeComplete}
         />
+
         <View style={styles.buttonContainer}>
           <Button
             large
