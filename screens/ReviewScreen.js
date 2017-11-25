@@ -4,6 +4,7 @@ import { Button, Card } from 'react-native-elements';
 import { connect } from 'react-redux';
 
 import Map from '../components/Map';
+
 class ReviewScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
@@ -21,20 +22,18 @@ class ReviewScreen extends Component {
 
   renderLikedJobs = () => {
     return this.props.likedJobs.map(job => {
+      const { company, formattedRelativeTime, url, jobkey, longitude, latitude, jobtitle } = job;
+
       const initialRegion = {
-        longitude: job.longitude,
-        latitude: job.latitude,
+        longitude,
+        latitude,
         latitudeDelta: 0.045,
         longitudeDelta: 0.02
       };
 
-      const { company, formattedRelativeTime, url, jobkey } = job;
-
       return (
-        <Card key={jobkey} wrapperStyle={{ height: 200 }}>
-          <View style={{ flex: 1 }}>
-            <Map initialRegion={initialRegion} />
-          </View>
+        <Card key={jobkey} title={jobtitle} wrapperStyle={{ height: 250 }}>
+          <Map initialRegion={initialRegion} />
 
           <View style={styles.detailWrapper}>
             <Text style={styles.italics}>{company}</Text>
@@ -62,6 +61,7 @@ class ReviewScreen extends Component {
 
 const styles = {
   detailWrapper: {
+    marginTop: 10,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-around'
