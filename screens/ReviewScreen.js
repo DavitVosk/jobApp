@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View, Platform } from 'react-native';
-import { Button } from 'react-native-elements';
+import { Text, View, Platform, ScrollView, Linking } from 'react-native';
+import { Button, Card } from 'react-native-elements';
 import { connect } from 'react-redux';
+import { MapView } from 'expo';
 
 class ReviewScreen extends Component {
 
@@ -16,25 +17,65 @@ class ReviewScreen extends Component {
       />
     ),
     headerStyle: { marginTop: Platform.OS === 'android' ? 24 : 0 }
-  })
+  });
+
+  renderLikedJobs = () => {
+    return this.props.likedJobs.map(job => {
+      const initialRegion = {
+        longitude: job.longitude,
+        latitude: job.latitude,
+        latitudeDelta: 0.045,
+        longitudeDelta: 0.02
+      };
+
+      const { company, formattedRelativeTime, url, jobkey } = job;
+
+      return (
+        <Card key={jobkey} wrapperStyle={{ height: 200 }}>
+          <View style={{ flex: 1 }}>
+            <MapView
+              scrollEnabled={false}
+              style={{ flex: 1 }}
+              cacheEnabled={Platform.OS === 'android' ? true : false}
+              initialRegion={initialRegion}
+            />
+          </View>
+          <View style={styles.detailWrapper}>
+            <Text style={styles.italics}>{company}</Text>
+            <Text style={styles.italics}>{formattedRelativeTime}</Text>
+          </View>
+          <Button
+            title={'Apply Now'}
+            backgroundColor='#009688'
+            onPress={() => Linking.openURL(url)}
+          />
+        </Card>
+      )
+    })
+  };
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>ReviewScreen</Text>
-        <Text>ReviewScreen</Text>
-        <Text>ReviewScreen</Text>
-      </View>
-    );
+      <ScrollView>
+        {this.renderLikedJobs()}
+      </ScrollView>
+    )
   }
 }
 
 const styles = {
-  container: {}
+  detailWrapper: {
+    marginBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  italics: {
+    fontStyle: 'italic'
+  }
 };
 
-const mapStateToProps = ({ likedJibs }) => {
-  return { likedJibs }
+const mapStateToProps = ({ likedJobs }) => {
+  return { likedJobs }
 };
 
 export default connect(mapStateToProps)(ReviewScreen);
