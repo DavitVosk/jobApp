@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06f5d435-bfac-4358-9ac4-5c8b8c26ac9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/screens/ReviewScreen.js" afterPath="$PROJECT_DIR$/screens/ReviewScreen.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/jobs_actions.js" afterPath="$PROJECT_DIR$/actions/jobs_actions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/types.js" afterPath="$PROJECT_DIR$/actions/types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reducers/like_reducer.js" afterPath="$PROJECT_DIR$/reducers/like_reducer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/screens/SettingsScreen.js" afterPath="$PROJECT_DIR$/screens/SettingsScreen.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="like_reducer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reducers/like_reducer.js">
+      <file leaf-file-name="jobs_actions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/actions/jobs_actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="1134">
+              <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -67,14 +70,15 @@
         <option value="$PROJECT_DIR$/reducers/jobs_reducer.js" />
         <option value="$PROJECT_DIR$/components/Swipe.js" />
         <option value="$PROJECT_DIR$/actions/jobs_action.js" />
-        <option value="$PROJECT_DIR$/actions/types.js" />
-        <option value="$PROJECT_DIR$/actions/jobs_actions.js" />
-        <option value="$PROJECT_DIR$/reducers/like_reducer.js" />
         <option value="$PROJECT_DIR$/reducers/index.js" />
         <option value="$PROJECT_DIR$/components/Map.js" />
         <option value="$PROJECT_DIR$/screens/DeckScreen.js" />
         <option value="$PROJECT_DIR$/screens/MapScreen.js" />
         <option value="$PROJECT_DIR$/screens/ReviewScreen.js" />
+        <option value="$PROJECT_DIR$/actions/types.js" />
+        <option value="$PROJECT_DIR$/actions/jobs_actions.js" />
+        <option value="$PROJECT_DIR$/reducers/like_reducer.js" />
+        <option value="$PROJECT_DIR$/screens/SettingsScreen.js" />
       </list>
     </option>
   </component>
@@ -191,12 +195,12 @@
       <workItem from="1510505306131" duration="21730000" />
       <workItem from="1510768323343" duration="1311000" />
       <workItem from="1510922105885" duration="147000" />
-      <workItem from="1511453439160" duration="17939000" />
+      <workItem from="1511453439160" duration="18779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59031000" />
+    <option name="totallyTimeSpent" value="59871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="99" y="45" width="1427" height="922" extended-state="0" />
@@ -393,22 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/jobs_actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -441,14 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/SettingsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/WelcomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -461,14 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-178">
           <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/MapScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -489,14 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ReviewScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reducers/jobs_reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -505,10 +469,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/actions/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/MapScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="62" column="12" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="62" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/ReviewScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="75" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/SettingsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reducers/like_reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/jobs_actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="28" />
           <folding />
         </state>
       </provider>
