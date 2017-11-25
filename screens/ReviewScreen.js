@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Platform, ScrollView, Linking } from 'react-native';
-import { Button, Card } from 'react-native-elements';
+import { Button, Card, Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
 
 import Map from '../components/Map';
@@ -8,7 +8,7 @@ import Map from '../components/Map';
 class ReviewScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: 'Review jobs',
+    title: 'Review Jobs',
     headerRight: (
       <Button
         title='Settings'
@@ -17,7 +17,10 @@ class ReviewScreen extends Component {
         backgroundColor={'transparent'}
       />
     ),
-    headerStyle: { marginTop: Platform.OS === 'android' ? 24 : 0 }
+    headerStyle: { marginTop: Platform.OS === 'android' ? 24 : 0 },
+    tabBarIcon: ({ tintColor }) => (
+      <Icon name='favorite' size={30} color={tintColor} />
+    ),
   });
 
   renderLikedJobs = () => {
